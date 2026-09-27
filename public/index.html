@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111318">
+  <title>LOOKWISE – AI Style Coach</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><div class="brand">LOOK<span>WISE</span></div><div class="tag">AI STYLE COACH</div></header>
+<main>
+  <section class="hero">
+    <p class="eyebrow">DEIN LOOK. VORHER SEHEN.</p>
+    <h1>Finde heraus, was<br><em>wirklich zu dir passt.</em></h1>
+    <p>Lade ein Foto hoch und probiere Frisuren, Haarfarben und moderne Outfits mit KI aus.</p>
+  </section>
+
+  <section class="card">
+    <div class="step"><b>01</b><span>Foto hochladen</span></div>
+    <label class="upload" for="photo">
+      <input id="photo" type="file" accept="image/jpeg,image/png,image/webp">
+      <span class="plus">＋</span><strong>Foto auswählen</strong><small>JPG, PNG oder WEBP · max. 12 MB</small>
+    </label>
+    <div id="previewWrap" class="preview hidden"><img id="preview" alt="Vorschau"></div>
+  </section>
+
+  <section class="card">
+    <div class="step"><b>02</b><span>Deinen Look wählen</span></div>
+    <label>Frisur</label>
+    <select id="hairstyle">
+      <option>Long Bob, weich und modern</option>
+      <option>Collarbone Cut mit Bewegung</option>
+      <option>Weiche mittellange Wellen</option>
+      <option>Stufiger Schnitt mit Volumen</option>
+      <option>Curtain Bangs mit längeren Stufen</option>
+      <option>Glatter moderner Bob</option>
+      <option>Lockerer moderner Dutt</option>
+    </select>
+    <label>Haarfarbe</label>
+    <select id="hairColor">
+      <option>Caramel Balayage, natürlich</option>
+      <option>Natürlicher eigener Farbton</option>
+      <option>Warmes Mittelbraun</option>
+      <option>Dunkelbraun</option>
+      <option>Natürliches Kupfer</option>
+      <option>Dunkelblond mit feinen Highlights</option>
+      <option>Kühles Beige-Blond</option>
+    </select>
+    <label>Kleidung</label>
+    <select id="outfit">
+      <option>Modern Casual: Jeans, hochwertiges Top, weiße Sneaker</option>
+      <option>Smart Casual: Jeans, Blazer, schlichtes Top, Sneaker</option>
+      <option>Elegant: moderne Stoffhose, edles Top, dezente Schuhe</option>
+      <option>Business: zeitgemäßer Blazer, Hose, cleanes Top</option>
+      <option>Sommer: leichte moderne Hose, schönes Top, helle Sneaker</option>
+      <option>Abend: stilvoll, modern und zurückhaltend elegant</option>
+    </select>
+
+    <button id="generate" class="primary">✨ LOOK GENERIEREN</button>
+    <button id="advisor" class="secondary">✦ KI BERÄT MICH</button>
+    <p class="hint">„KI berät mich“ lässt die KI Frisur, Farbe und Outfit passend zusammenstellen.</p>
+  </section>
+
+  <section id="statusCard" class="card hidden">
+    <div id="status" class="status"></div>
+  </section>
+
+  <section id="resultCard" class="card hidden">
+    <div class="step"><b>03</b><span>Dein neuer Look</span></div>
+    <div class="compare">
+      <div><small>ORIGINAL</small><img id="original"></div>
+      <div><small>NEUER LOOK</small><img id="result"></div>
+    </div>
+    <a id="save" class="primary linkbutton" download="lookwise-look.png">Bild speichern</a>
+  </section>
+</main>
+<footer>LOOKWISE · Prototyp · Hochgeladene Fotos werden nur zur angeforderten Bildbearbeitung verwendet.</footer>
+<script src="/app.js"></script>
+</body>
+</html>
